@@ -22,6 +22,5 @@ class Artist
   def song_count
     Songs.all.count{|song| song.artist == artist}
   end
-
-
+  
 end
