@@ -19,8 +19,12 @@ class Artist
     add_song(song)
   end
 
-  def song_count
-    Song.all.count{|song| song.artist == self}
+  def self.song_count
+    artist_hash = {} 
+    Song.all.each do |song| 
+      artist_hash.include?(song.artist) ? artist_hash[song.artist] << song : artist_hash[song.artist] = [song]
+    end 
+    artist_hash
   end
 
 end
