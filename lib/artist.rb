@@ -19,5 +19,9 @@ class Artist
     add_song(song)
   end
 
+  def song_count
+    Songs.all.count{|song| song.artist == artist}
+  end
+
 
 end
