@@ -20,7 +20,7 @@ class Author
   end
 
   def post_count
-    Post.all.count{|post| post.author == self}
+    Post.all.size
   end
 
 end
