@@ -4,10 +4,12 @@ class Song
 
   @@songs = []
 
-  def initialize
+  def initialize(name)
+    @name = name 
     song = self
     @@songs < song
   end
+
 
 
 end
